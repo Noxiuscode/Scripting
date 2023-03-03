@@ -4,7 +4,7 @@ using UnityEngine;
 using MoreMountains.Tools;
 using MoreMountains.CorgiEngine;
 
-public class Gatito : PickableItem
+public class Gatito : PickableItem //Sobreescribir el metodo pick
 {
     [SerializeField]
     private GameObject ui_puntaje;
@@ -18,6 +18,6 @@ public class Gatito : PickableItem
     }
     protected override void Pick(GameObject picker)
     {
-        control_gatitos.ActualizarPuntaje(valor_gatito);
+       // control_gatitos.ActualizarPuntaje(valor_gatito);
     }
 }

@@ -9,11 +9,12 @@ public class ControlGatitos : MonoBehaviour
     private TMP_Text txt_contador_gatitos;
     private int contador_gatitos;
 
-    public void ActualizarGatitos(int valor)
+   /* public void ActualizarGatitos(int valor)
     {
         contador_gatitos += valor;
         ActualizarValorUI();
-    }
+    }*/
+
     public void ActualizarValorUI()
     {
         txt_contador_gatitos.text = "" + contador_gatitos;

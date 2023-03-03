@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1012755579987142454}
   - component: {fileID: 1124498844895383420}
   - component: {fileID: 4219094905934766998}
-  - component: {fileID: 7838383867745153084}
   m_Layer: 0
   m_Name: coin 1 (2)
   m_TagString: Untagged
@@ -169,27 +168,6 @@ MonoBehaviour:
   AssociatedCheckpoints: []
   RespawnFeedback: {fileID: 0}
 --- !u!114 &4219094905934766998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012755579992658646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43d38319c2781b7488f268fb540effe1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PickFeedbacks: {fileID: 0}
-  DisableObjectOnPick: 1
-  DisableRendererOnPick: 0
-  DisableColliderOnPick: 0
-  DisableTargetObjectOnPick: 0
-  TargetObjectToDisable: {fileID: 0}
-  TargetObjectDisableDelay: 1
-  ui_puntaje: {fileID: 0}
-  valor_gatito: 0
---- !u!114 &7838383867745153084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

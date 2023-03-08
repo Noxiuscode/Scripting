@@ -233,4 +233,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scripting/Niveles/Controles.unity
     guid: 945508927b41aa94eb77d00d03b31b0f
+  - enabled: 1
+    path: Assets/Scripting/Niveles/Nivel2.unity
+    guid: 36e01c34dcb16aa46aa08f7ac23892c6
   m_configObjects: {}

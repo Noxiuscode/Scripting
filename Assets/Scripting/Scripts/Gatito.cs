@@ -19,5 +19,6 @@ public class Gatito : PickableItem //Sobreescribir el metodo pick
     protected override void Pick(GameObject picker)
     {
        // control_gatitos.ActualizarPuntaje(valor_gatito);
+       //hi
     }
 }

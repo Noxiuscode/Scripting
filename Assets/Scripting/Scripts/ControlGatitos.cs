@@ -20,6 +20,12 @@ public class ControlGatitos : MonoBehaviour
         return contador_gatitos;
     }
 
+    public void ResetearPuntaje()
+    {
+        contador_gatitos = 0;
+        ActualizarValorUI();
+    }
+
     public void ActualizarValorUI()
     {
         txt_contador_gatitos.text = "" + contador_gatitos;

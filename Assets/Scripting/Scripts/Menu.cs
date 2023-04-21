@@ -2,9 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using MoreMountains.Tools;
 
 public class Menu : MonoBehaviour
 {
+
+   void Update()
+   {
+        if(Input.GetButtonDown("Submit"))
+        {
+            Debug.Log("click");
+        }
+   }
    public void OnPressJugar()
     {
         SceneManager.LoadScene("Nivel1", LoadSceneMode.Single);

@@ -4,9 +4,15 @@ using UnityEngine;
 using MoreMountains.Tools;
 using MoreMountains.CorgiEngine;
 
-public class ControlMuerte : MonoBehaviour, MMEventListener<CorgiEngineEvent>, MMEventListener<PickableItemEvent>
+public class ControlMuerte : MonoBehaviour, MMEventListener<CorgiEngineEvent>, MMEventListener<PickableItemEvent>, MMEventListener<MMDamageTakenEvent>
 {
 
+    public enum ControlMuerteTypes
+    {
+        GameOver
+    }
+
+  
     [SerializeField]
 
     private List<GameObject> corazones;
@@ -15,32 +21,37 @@ public class ControlMuerte : MonoBehaviour, MMEventListener<CorgiEngineEvent>, M
 
     private int contador_estrellas;
 
+    [SerializeField]
 
-    // Start is called before the first frame update
+    private int total_estrellas;
+
+    [SerializeField]
+
+    private int tolerancia_colision;
+
+    private int tolerancia_colision_inicial;
+
+
+
+
+
     public void Start()
     {
         vidas = corazones.Count;
+        tolerancia_colision_inicial = tolerancia_colision;
 
-        //Se inicializa el atributo de vida como la cantidad de corazones que existen en la lista, por eso el .count
+       
 
     }
 
     public virtual void OnMMEvent(CorgiEngineEvent e)
     {
-        if(e.EventType == CorgiEngineEventTypes.PlayerDeath)
+        if (e.EventType == CorgiEngineEventTypes.PlayerDeath)
         {
-            if(vidas-1>=0)
-            {
-                vidas--;
-                corazones[vidas].SetActive(false);
 
-            }
 
-            if(vidas == 0)
-            {
-                Debug.Log("Game over");
+            QuitarVida();
 
-            }
         }
 
         Debug.Log(vidas);
@@ -54,12 +65,68 @@ public class ControlMuerte : MonoBehaviour, MMEventListener<CorgiEngineEvent>, M
 
         contador_estrellas++;
 
-        if(contador_estrellas==3 && vidas+1<corazones.Count)
+        Debug.Log("contador de estrellas: " + contador_estrellas + " vidas " + vidas);
+
+
+        if (contador_estrellas == 3 && vidas + 1 <= corazones.Count)
         {
             corazones[vidas].SetActive(true);
             vidas++;
             contador_estrellas = 0;
 
         }
+    }
+
+    public virtual void OnMMEvent(MMDamageTakenEvent e)
+    {
+       
+        if(--tolerancia_colision==0)
+        {
+            QuitarVida();
+            tolerancia_colision = tolerancia_colision_inicial;
+            
+
+        }
+        e.Instigator.SetActive(false);
+
+
+
+
+    }
+
+    public void QuitarVida()
+    {
+
+        if(vidas-1 >= 0)
+        {
+            contador_estrellas = 0;
+            vidas--;
+            corazones[vidas].SetActive(false);
+            Debug.Log("Player death");
+
+
+        }
+
+        if (vidas == 0)
+        {
+            Debug.Log("Game over");
+            MMEventManager.TriggerEvent(new MMGameEvent("GameOver"));
+
+        }
+    }
+
+
+    void OnEnable()
+    {
+        this.MMEventStartListening<CorgiEngineEvent>();
+        this.MMEventStartListening<PickableItemEvent>();
+        this.MMEventStartListening<MMDamageTakenEvent>();
+    }
+
+    void OnDisable()
+    {
+        this.MMEventStopListening<CorgiEngineEvent>();
+        this.MMEventStopListening<PickableItemEvent>();
+        this.MMEventStopListening<MMDamageTakenEvent>();
     }
 }

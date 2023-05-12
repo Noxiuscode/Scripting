@@ -51,7 +51,7 @@ Transform:
   m_GameObject: {fileID: 119040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -70.76204, y: -3.675519, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 465368}
@@ -232,7 +232,7 @@ MonoBehaviour:
   PlayerID: Player1
   InitialFacingDirection: 1
   DirectionOnSpawn: 1
-  CharacterAnimator: {fileID: 7798527774007179782}
+  CharacterAnimator: {fileID: 0}
   UseDefaultMecanim: 1
   PerformAnimatorSanityChecks: 1
   DisableAnimatorLogs: 0
@@ -6148,8 +6148,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6707816943335508271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: -0.141, y: -0.031, z: 0}
+  m_LocalScale: {x: 0.07468582, y: 0.07468582, z: 0.07468582}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2320345801386116752}

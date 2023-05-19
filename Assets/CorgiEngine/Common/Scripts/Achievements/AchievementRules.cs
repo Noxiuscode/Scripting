@@ -37,6 +37,8 @@ namespace MoreMountains.CorgiEngine
 					case MMCharacterEventTypes.Jump:
 						MMAchievementManager.AddProgress ("JumpAround", 1);
 						break;
+
+					
 				}	
 			}
 		}

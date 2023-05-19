@@ -232,7 +232,10 @@ EditorBuildSettings:
     guid: 49366b3601300ee448fc8ffd81c4911b
   - enabled: 1
     path: Assets/Scripting/Niveles/Nivel2.unity
-    guid: 5da4f35e16ea61c4fb39141029eb1824
+    guid: 88afa19a756168648a91f45582ab1fe4
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scripting/Niveles/Creditos.unity
     guid: 0fd9e9c3420e0424abab6b6f6c7990c5
@@ -242,4 +245,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scripting/Niveles/Juego finalizado.unity
+    guid: 195e77d7d9256274e8b3b88d3a8df304
+  - enabled: 1
+    path: Assets/Scripting/Niveles/Menu.unity
+    guid: a87f64a54e9476940ab0de9fd99f8464
   m_configObjects: {}

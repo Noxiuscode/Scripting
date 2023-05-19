@@ -21,11 +21,17 @@ public class ControlNivel : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if(control_gatitos.ContadorGatitos()==2)
+        AllGatitosCollected();
+    }
+
+    public void AllGatitosCollected()
+    {
+        if(transform.childCount == 0)
         {
             levelCleared.gameObject.SetActive(true);
+            Debug.Log("No hay mas gatitos");
             Invoke("ChangeScene", 2);
-            
+
         }
     }
 

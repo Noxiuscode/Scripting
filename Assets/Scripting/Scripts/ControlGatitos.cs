@@ -3,8 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
+
 public class ControlGatitos : MonoBehaviour
 {
+
+   
+
+
     [SerializeField]
     private TMP_Text txt_contador_gatitos;
     private int contador_gatitos;
@@ -29,5 +35,6 @@ public class ControlGatitos : MonoBehaviour
     public void ActualizarValorUI()
     {
         txt_contador_gatitos.text = "" + contador_gatitos;
+
     }
 }

@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
 {
    public void OnPressJugar()
     {
-        SceneManager.LoadScene("Nivel1", LoadSceneMode.Single);
+        SceneManager.LoadScene("Mundo", LoadSceneMode.Single);
 
     }
 

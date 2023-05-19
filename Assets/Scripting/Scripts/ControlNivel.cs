@@ -10,18 +10,28 @@ public class ControlNivel : MonoBehaviour
 {
 
     public Text levelCleared;
+
+    public Text totalGatitos;
+
+    public Text gatitosRecolectados;
+
+    private int totalGatitosInLevel;
     [SerializeField]
     private ControlGatitos control_gatitos;
     // Start is called before the first frame update
     void Start()
     {
-        
+        totalGatitosInLevel = transform.childCount;
     }
 
     // Update is called once per frame
     public void Update()
     {
         AllGatitosCollected();
+
+        totalGatitos.text=totalGatitosInLevel.ToString();
+        gatitosRecolectados.text=transform.childCount.ToString();
+
     }
 
     public void AllGatitosCollected()

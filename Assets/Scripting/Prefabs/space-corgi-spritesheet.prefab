@@ -4684,7 +4684,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 1888fd7255deebd458cfba33e8407e1f, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4836,7 +4835,7 @@ SpriteRenderer:
   m_SortingLayerID: 600026165
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2298f9564d3b8c749ab3ac2b9f48e86a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3559e3b29eac5a43a0e004d8de34287, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4860,7 +4859,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14796638, y: -0.39643908}
+  m_Offset: {x: -0.14796638, y: -0.27152562}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4871,7 +4870,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9485316, y: 5.813469}
+  m_Size: {x: 2.9485316, y: 5.563642}
   m_EdgeRadius: 0
 --- !u!50 &5042392381659748921
 Rigidbody2D:
@@ -4904,7 +4903,7 @@ Animator:
   m_GameObject: {fileID: 5042392381655799769}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 64864f2ff9130204696e034a337869b8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2ea9a2f4fa536474e866f8dc873a5c47, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5547,8 +5546,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0646c06768a308441b00c2566216d6cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableSelectCharacter: 0
   playerSelected: 0
   spriteRenderer: {fileID: 5042392381676596729}
+  animator: {fileID: 5042392381646414873}
+  playersController:
+  - {fileID: 9100000, guid: 64864f2ff9130204696e034a337869b8, type: 2}
+  - {fileID: 9100000, guid: 2ea9a2f4fa536474e866f8dc873a5c47, type: 2}
   playersRenderer:
   - {fileID: 21300000, guid: 2298f9564d3b8c749ab3ac2b9f48e86a, type: 3}
   - {fileID: 21300000, guid: c3559e3b29eac5a43a0e004d8de34287, type: 3}
@@ -5849,7 +5853,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.16759014, y: -0.0679425}
+  m_Offset: {x: 0.35037494, y: -0.09358299}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5860,7 +5864,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4620059, y: 1.1358848}
+  m_Size: {x: 2.4979362, y: 5.6798067}
   m_EdgeRadius: 0
 --- !u!1 &8660991370232382195
 GameObject:
